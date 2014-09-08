@@ -21,22 +21,24 @@ ALLEGRO_BITMAP* Player::getImage()
 	return image;
 }
 
-void Player::moveX(int x)
+void Player::moveX(float x)
 {
 	this->x += x;
+	this->collision_W = this->x - 1;
 }
 
-void Player::moveY(int y)
+void Player::moveY(float y)
 {
 	this->y += y;
+	this->collision_N = this->y - 1;
 }
 
-int Player::getX()
+float Player::getX()
 {
 	return x;
 }
 
-int Player::getY()
+float Player::getY()
 {
 	return y;
 }
